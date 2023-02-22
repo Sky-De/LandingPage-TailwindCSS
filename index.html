@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing page | tailwindcss</title>
   </head>
-  <body class="pb-72 max-w-[2000px] mx-auto text-neutral-900 dark:text-neutral-200 bg-white dark:bg-neutral-800">
+  <body class="max-w-[2000px] mx-auto text-neutral-900 dark:text-neutral-200 bg-white dark:bg-neutral-800">
     <!-- NAV------------------------------------------------------------------------------>
     <nav class="mx-auto p-4 bg-amber-400">
       <div class="container mx-auto flex items-center justify-between">
@@ -24,7 +24,7 @@
           <a class="py-2 px-6 dark:text-neutral-900 transition-all duration-200" role="menuitem" href="/" >Home</a>
           <a class="py-2 px-6 dark:text-neutral-900 transition-all duration-200 lg:mr-auto" role="menuitem" href="/" >Contact</a>
           <a class="py-2 px-6 dark:text-neutral-900 transition-all duration-200" role="menuitem" href="/" >Login</a>
-          <a class="py-2 px-6 dark:text-neutral-900 transition-all duration-200 bg-teal-900 text-neutral-100 hover:rounded-md shadow-lg" role="menuitem" href="/" >Sign Up</a>
+          <a class="py-2 px-6 transition-all duration-200 bg-teal-900 text-neutral-200 hover:rounded-md shadow-lg" role="menuitem" href="/" >Sign Up</a>
         </div>
       </div>
     </nav>
@@ -40,7 +40,7 @@
     </header>
     <!-- MAIN------------------------------------------------------------------------------>
     <main class="grid sm:gap-16 md:gap-24 lg:gap-32 px-8 overflow-hidden">
-      <!-- download BTN -------->
+      <!-- Download BTN -------->
       <a href="#" class="py-2 px-6 transition-all duration-200 bg-amber-400 dark:text-neutral-900 mx-auto my-12 flex gap-4 hover:rounded-md shadow-lg font-bold hover:shadow-none">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="w-6 h-6">
@@ -49,7 +49,7 @@
         </svg>
         <span>Download the App</span>
       </a>
-      <!-- cards section------------------------------------------------------------->
+      <!-- Cards Section------------------------------------------------------------->
       <section class="relative" aria-labelledby="qualities">
         <img src="./assets/dots.svg" class="hidden lg:block absolute top-1/2 -translate-y-1/2 -left-24 xl:-left-7" alt="Dots" aria-hidden="true">
         <img src="./assets/dots.svg" class="hidden lg:block absolute top-1/2 -translate-y-1/2 -right-24 xl:-right-7" alt="Dots" aria-hidden="true">
@@ -93,7 +93,98 @@
           </div>
         </div>
       </section>
-      <!-- partner section------------------------------------------------------------->
+      <!-- Partner Section------------------------------------------------------------->
+      <section aria-lebeldby="partners" class="text-center grid gap-8 place-items-center mt-24">
+        <div class="grid gap-4">
+          <h2 id="partners" class="text-4xl font-bold text-amber-400">Our Partners</h2>
+          <p class="w-full max-w-lg">We’ve partnered with hundreds of smart home brands to help you create a smart home that fits your needs and doesn’t lock
+          you in.</p>
+        </div>
+        <!-- cards------ -->
+        <div class="flex flex-wrap justify-center gap-8 md:gap-x-16 max-w-2xl mx-auto">
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+            <img src="./assets/partner1.svg" alt="Partner1" class="h-16 w-16">
+          </div>
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+            <img src="./assets/partner2.svg" alt="Partner2" class="h-16 w-16">
+          </div>
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+            <img src="./assets/partner3.svg" alt="Partner3" class="h-16 w-16">
+          </div>
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+            <img src="./assets/partner4.svg" alt="Partner4" class="h-16 w-16">
+          </div>
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+            <img src="./assets/partner5.svg" alt="Partner5" class="h-16 w-16">
+          </div>
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+            <img src="./assets/partner6.svg" alt="Partner6" class="h-16 w-16">
+          </div>
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+            <img src="./assets/partner7.svg" alt="Partner7" class="h-16 w-16">
+          </div>
+        </div>
+      </section>
+      <!-- HomeCTA Section------------------------------------------------------------->
+      <section aria-labedby="home" class="relative">
+        <div class="flex flex-wrap-reverse gap-8 justify-center">
+          <div class="flex flex-wrap flex-col items-start lg:justify-center gap-8">
+            <div class="flex flex-wrap flex-col items-start gap-2">
+              <h2 class="font-bold text-4xl">Relax, you’re home!</h2>
+              <p class="max-w-md">All our supported hardware includes traditional inputs so you can integrate our products into your house in a way that’s
+              best for everyone.</p>
+            </div>
+            <a href="#"
+              class="py-2 px-6 transition-all duration-200 bg-amber-400 dark:text-neutral-900  flex gap-4 hover:rounded-md shadow-lg font-bold hover:shadow-none">
+              Sign Up
+            </a>
+          </div>
+          <img src="./assets/table.png" alt="Table">
+        </div>
+        <div class="absolute -bottom-6 -right-32 -z-10 aspect-square md:border-8 border-amber-400 rounded-full md:w-64 lg:w-96 xl:max-w-lg"></div>
+        <div class="bg-teal-900 h-24 -mx-8 mt-12 xl:h-48 xl:absolute w-screen -bottom-8 -z-10 xl:mt-0"></div>
+      </section>
+      <!-- Form Section------------------------------------------------------------->
+      <section aria-lebeldby="contact" id="form" class="container mx-auto px-8 overflow-hidden">
+        <div class="flex flex-wrap justify-center gap-12 md:gap-6 lg:gap-20">
+          <div class="md:flex-1 md:max-w-sm relative">
+            <img src="./assets/lamp.png" alt="Lamp" class="mx-auto">
+            <!-- Download BTN -------->
+            <a href="#"
+              class="py-2 px-6 transition-all duration-200 bg-amber-400 dark:text-neutral-900 mx-auto mt-12 md:mb-12 flex gap-4 hover:rounded-md shadow-lg font-bold hover:shadow-none w-max ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+              <span>Download the App</span>
+            </a>
+            <img src="./assets/app.svg" alt="App" width="240" class="hidden md:block drop-shadow-xl absolute left-1/2 -translate-x-1/2 max-w-16 xl:max-w-xs">
+            <div
+              class="absolute -bottom-14 left-1/2 -translate-x-1/2 -z-10 aspect-square md:border-8 border-amber-400 rounded-full md:w-72 lg:w-96">
+            </div>
+          </div>
+          <form class="relative border-8 border-neutral-900 p-6 rounded-lg grid gap-8 md:flex-1 md:max-w-lg my-4 md:my-12 lg:my-16 bg-white dark:bg-neutral-800 w-full">
+            <h2 id="contact" class="text-3xl font-bold">Let's Connect</h2>
+            <div class="relative">
+              <input type="text" id="name" class="form-input w-full border-4 border-amber-400 rounded-md focus:ring-2 focus:ring-offset-2 focus:border-amber-400 dark:bg-amber-400 dark:text-neutral-900 font-bold placeholder-transparent peer" placeholder="Your Name">
+              <label for="name" class="text-neutral-500 text-sm font-bold uppercase absolute  -translate-y-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300 transition-all">Your Name</label>
+            </div>
+            <div class="relative">
+              <input type="email" id="email" class="form-input w-full border-4 border-amber-400 rounded-md focus:ring-2 focus:ring-offset-2 focus:border-amber-400 dark:bg-amber-400 dark:text-neutral-900 font-bold placeholder-transparent peer" placeholder="Your Email">
+              <label for="email" class="text-neutral-500 text-sm font-bold uppercase absolute  -translate-y-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300 transition-all">Your Name</label>
+            </div>
+            <div class="relative">
+              <textarea name="content" id="content" cols="20" rows="5" class=" peer form-textarea resize-none w-full border-4 border-amber-400 rounded-md focus:ring-4 dark:focus:ring-offset-2 focus:ring-amber-400 focus:border-amber-400 focus:outline-none dark:bg-amber-400 dark:text-neutral-900 placeholder-transparent" placeholder="How can we help?"></textarea>
+              <label for="content" class="text-neutral-500 text-sm font-bold uppercase absolute -top-3 left-2 -translate-y-1/2 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:top-6 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300"> How can we help? </label>     
+            </div>
+          <a class="py-2 px-6 transition-all duration-200 bg-neutral-900 text-neutral-200 hover:rounded-md shadow-lg rounded-md ring-offset-4 ring-offset-white dark:ring-offset-amber-400 w-max" role="menuitem" href="/" >Sign Up</a>
+
+          </form>
+        </div>
+      </section>
+      
+
     </main>
 
     <script type="module" src="/main.js"></script>
