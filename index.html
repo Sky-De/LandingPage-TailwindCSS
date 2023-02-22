@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scrollbar-hide">
+<html lang="en" class="scrollbar-hide scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -10,7 +10,21 @@
     <!-- NAV------------------------------------------------------------------------------>
     <nav class="mx-auto p-4 bg-amber-400">
       <div class="container mx-auto flex items-center justify-between">
-        <a href="/" aria-label="Go to home page" class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-400 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-9 z-50">
+        <!-- light/dark mode BTN -->
+        <button aria-label="dark-light mode button" id="theme-toggle" type="button"
+          class="text-gray-500 absolute left-1/2 top-3 lg:left-3 z-55 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5 outline-none">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <a href="/" aria-label="Go to home page" class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-400 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-9 z-55">
           <img src="./assets/logo.svg" alt="Home Landing Page Logo" width="200" class="w-48 md:w-64
           lg:w-72 hover:opacity-70 transition-opacity duration-300">
         </a>
@@ -21,15 +35,16 @@
           </svg>
         </button>
         <div id="menubar" role="menubar" class="hidden lg:shadow-none shadow-lg flex flex-col gap-4 absolute top-16 left-0 bg-amber-400 min-w-full font-bold text-center p-6 items-center lg:flex lg:flex-row lg:static lg:w-full  lg:justify-between z-50">
-          <a class="py-2 px-6 dark:text-neutral-900 transition-all duration-200" role="menuitem" href="/" >Home</a>
-          <a class="py-2 px-6 dark:text-neutral-900 transition-all duration-200 lg:mr-auto" role="menuitem" href="/" >Contact</a>
+          <a class="py-2 px-6 dark:text-neutral-900 transition-all duration-200" role="menuitem" href="#home" >Home</a>
+          <a class="py-2 px-6 dark:text-neutral-900 transition-all duration-200" role="menuitem" href="#partners" >Partners</a>
+          <a class="py-2 px-6 dark:text-neutral-900 transition-all duration-200 lg:mr-auto" role="menuitem" href="#contact" >Contact</a>
           <a class="py-2 px-6 dark:text-neutral-900 transition-all duration-200" role="menuitem" href="/" >Login</a>
           <a class="py-2 px-6 transition-all duration-200 bg-teal-900 text-neutral-200 hover:rounded-md shadow-lg" role="menuitem" href="/" >Sign Up</a>
         </div>
       </div>
     </nav>
     <!-- HEADER----------------------------------------------------------------------------->
-    <header class="relative pt-16 md:pt-24 lg:pt-48">
+    <header id="home" class="relative pt-16 md:pt-24 lg:pt-48">
       <div class="absolute inset-0 bottom-8 md:bottom-24 xl:bottom-32 -z-10 bg-gradient-to-b from-amber-400 to-amber-600"></div>
       <div class="container mx-auto grid grid-rows-1 place-items-end px-2">
         <img class="row-start-1 row-end-2 col-start-1 col-end-1
@@ -39,7 +54,7 @@
       </div>
     </header>
     <!-- MAIN------------------------------------------------------------------------------>
-    <main class="grid sm:gap-16 md:gap-24 lg:gap-32 px-8 overflow-hidden">
+    <main class="grid gap-12 sm:gap-16 md:gap-24 lg:gap-32 px-8 overflow-hidden">
       <!-- Download BTN -------->
       <a href="#" class="py-2 px-6 transition-all duration-200 bg-amber-400 dark:text-neutral-900 mx-auto my-12 flex gap-4 hover:rounded-md shadow-lg font-bold hover:shadow-none">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -51,11 +66,11 @@
       </a>
       <!-- Cards Section------------------------------------------------------------->
       <section class="relative" aria-labelledby="qualities">
-        <img src="./assets/dots.svg" class="hidden lg:block absolute top-1/2 -translate-y-1/2 -left-24 xl:-left-7" alt="Dots" aria-hidden="true">
+        <img src="./assets/dots.svg" class="hidden  lg:block absolute top-1/2 -translate-y-1/2 -left-24 xl:-left-7" alt="Dots" aria-hidden="true">
         <img src="./assets/dots.svg" class="hidden lg:block absolute top-1/2 -translate-y-1/2 -right-24 xl:-right-7" alt="Dots" aria-hidden="true">
         <h2 id="qualities" class="sr-only">Our Qualities</h2>
         <div class="container mx-auto max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between">
-          <!-- card--- -->
+          <!-- card ----->
           <div class="grid gap-4 justify-items-center md:flex-1">
             <div class="rounded-full border-8 border-amber-400 p-4">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -102,25 +117,25 @@
         </div>
         <!-- cards------ -->
         <div class="flex flex-wrap justify-center gap-8 md:gap-x-16 max-w-2xl mx-auto">
-          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md hover:scale-105 cursor-pointer">
             <img src="./assets/partner1.svg" alt="Partner1" class="h-16 w-16">
           </div>
-          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md hover:scale-105 cursor-pointer">
             <img src="./assets/partner2.svg" alt="Partner2" class="h-16 w-16">
           </div>
-          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md hover:scale-105 cursor-pointer">
             <img src="./assets/partner3.svg" alt="Partner3" class="h-16 w-16">
           </div>
-          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md hover:scale-105 cursor-pointer">
             <img src="./assets/partner4.svg" alt="Partner4" class="h-16 w-16">
           </div>
-          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md hover:scale-105 cursor-pointer">
             <img src="./assets/partner5.svg" alt="Partner5" class="h-16 w-16">
           </div>
-          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md hover:scale-105 cursor-pointer">
             <img src="./assets/partner6.svg" alt="Partner6" class="h-16 w-16">
           </div>
-          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+          <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md hover:scale-105 cursor-pointer">
             <img src="./assets/partner7.svg" alt="Partner7" class="h-16 w-16">
           </div>
         </div>
@@ -142,7 +157,7 @@
           <img src="./assets/table.png" alt="Table">
         </div>
         <div class="absolute -bottom-6 -right-32 -z-10 aspect-square md:border-8 border-amber-400 rounded-full md:w-64 lg:w-96 xl:max-w-lg"></div>
-        <div class="bg-teal-900 h-24 -mx-8 mt-12 xl:h-48 xl:absolute w-screen -bottom-8 -z-10 xl:mt-0"></div>
+        <div class="bg-teal-900 h-24 -mx-8 mt-12  lg:h-48 xl:h-72 xl:absolute w-screen bottom-8 translate-y-12 sm:translate-y-16 md:translate-y-24 lg:translate-y-32 xl:translate-y-40 -z-10 xl:mt-0"></div>
       </section>
       <!-- Form Section------------------------------------------------------------->
       <section aria-lebeldby="contact" id="form" class="container mx-auto px-8 overflow-hidden">
@@ -161,7 +176,7 @@
             </a>
             <img src="./assets/app.svg" alt="App" width="240" class="hidden md:block drop-shadow-xl absolute left-1/2 -translate-x-1/2 max-w-16 xl:max-w-xs">
             <div
-              class="absolute -bottom-14 left-1/2 -translate-x-1/2 -z-10 aspect-square md:border-8 border-amber-400 rounded-full md:w-72 lg:w-96">
+              class="absolute -bottom-14 lg:-bottom-32 left-1/2 -translate-x-1/2 -z-10 aspect-square md:border-8 border-amber-400 rounded-full md:w-72 lg:w-96">
             </div>
           </div>
           <form class="relative border-8 border-neutral-900 p-6 rounded-lg grid gap-8 md:flex-1 md:max-w-lg my-4 md:my-12 lg:my-16 bg-white dark:bg-neutral-800 w-full">
@@ -179,14 +194,11 @@
               <label for="content" class="text-neutral-500 text-sm font-bold uppercase absolute -top-3 left-2 -translate-y-1/2 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:top-6 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300"> How can we help? </label>     
             </div>
           <a class="py-2 px-6 transition-all duration-200 bg-neutral-900 text-neutral-200 hover:rounded-md shadow-lg rounded-md ring-offset-4 ring-offset-white dark:ring-offset-amber-400 w-max" role="menuitem" href="/" >Sign Up</a>
-
           </form>
         </div>
       </section>
-      
-
     </main>
 
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/main.js" defer></script>
   </body>
 </html>
