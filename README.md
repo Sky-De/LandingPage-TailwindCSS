@@ -22,6 +22,8 @@ Feel free to give it a start 🌟
 ![Static Badge](https://img.shields.io/badge/Tailwind-black?style=for-the-badge&logo=tailwindcss)
 ![Static Badge](https://img.shields.io/badge/Netlify-black?style=for-the-badge&logo=netlify)
 
+![line]
+
 ## Features
 
 - Fully responsive
@@ -44,9 +46,7 @@ Take a look at the live project deployed on Netlify
 
 ## Preview
 
-![line]
-
-**DESKTOP**
+**DESKTOP ------------------------------------------------------------------**
 
 <img src="https://github.com/Sky-De/LandingPage-TailwindCSS/assets/79264045/00db401e-5fcd-4c02-a449-f20251093082" width="60%">
 
@@ -54,9 +54,8 @@ Take a look at the live project deployed on Netlify
 
 <img src="https://github.com/Sky-De/LandingPage-TailwindCSS/assets/79264045/8645810d-0fee-428b-8e8a-0550fdaa9504" width="60%">
 
-![line]
 
-**MOBILE**
+**MOBILE ----------------------------------------------------------------------**
 
 <img src="https://github.com/Sky-De/LandingPage-TailwindCSS/assets/79264045/870f7953-90cb-463c-b00b-352f654f0c0a" width="300">
 <img src="https://github.com/Sky-De/LandingPage-TailwindCSS/assets/79264045/5488303e-5092-469f-ab73-b2bf44e31ee6" width="300">
