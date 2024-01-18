@@ -6,6 +6,7 @@ Feel free to give it a start 🌟
 ## Table of Contents
 
 - [Tech Stack](#tech-stack)
+- [Features](#features)
 - [Demo](#demo)
 - [Preview](#preview)
 - [About](#about)
@@ -20,6 +21,13 @@ Feel free to give it a start 🌟
 ![Static Badge](https://img.shields.io/badge/CSS-black?style=for-the-badge&logo=CSS3)
 ![Static Badge](https://img.shields.io/badge/Tailwind-black?style=for-the-badge&logo=tailwindcss)
 ![Static Badge](https://img.shields.io/badge/Netlify-black?style=for-the-badge&logo=netlify)
+
+## Features
+
+- Fully responsive
+- Dark / light mode
+- Stunning design
+- Tailwind magic
 
 
 ![line]
